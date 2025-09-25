@@ -1,151 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join ToolNova Next</title>
-  <script src="https://toolnovanext.github.io/scripts/navigation.js" defer></script>
-  <script src="https://toolnovanext.github.io/scripts/notification.js" defer></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f7fb;
-      margin: 0;
-      padding: 20px;
-      color: #222;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 32px;
-      color: #1a237e;
-    }
-
-    .slogan {
-      text-align: center;
-      font-style: italic;
-      color: #555;
-      margin-bottom: 30px;
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    .section h2 {
-      font-size: 24px;
-      color: #0d47a1;
-      margin-bottom: 10px;
-    }
-
-    .feedback-box {
-      background: #e3f2fd;
-      padding: 20px;
-      border-left: 5px solid #2196f3;
-      border-radius: 10px;
-    }
-
-    .feedback-box p {
-      margin: 10px 0;
-    }
-
-    .feedback-box a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 16px;
-      background: #2196f3;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .feedback-box a:hover {
-      background: #1976d2;
-    }
-
-    ul.benefits {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .buttons a {
-      text-align: center;
-      padding: 12px;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 600;
-      transition: transform 0.2s ease;
-    }
-
-    .buttons a:hover {
-      transform: scale(1.03);
-    }
-
-    .youtube { background: #ff0000; }
-    .telegram { background: #0088cc; }
-    .whatsapp { background: #25d366; }
-
-    @media (min-width: 600px) {
-      .buttons {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Toolnova Next</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin-left: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-icons {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .icon-box {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .icon-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .icon-box i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .mission-vision {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .mission, .vision {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .mission h3, .vision h3 {
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(52, 152, 219, 0.05);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .team-icon {
+            height: 150px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+        }
+        
+        .team-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .team-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .team-info p {
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Current Work & Future Plans */
+        .work-plans {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .current-work, .future-plans {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .work-plans h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .work-plans ul {
+            list-style-type: none;
+        }
+        
+        .work-plans li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .work-plans li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+        
+        /* Important Links */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            text-align: center;
+            min-height: 70px;
+        }
+        
+        .link-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .footer-logo .logo-icon {
+            background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+        }
+        
+        .footer-logo-text h3 {
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+        
+        .footer-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content, .mission-vision, .work-plans {
+                flex-direction: column;
+            }
+            
+            .about-icons {
+                justify-content: center;
+                margin-top: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            nav li {
+                margin-left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+            }
+            
+            .nav-menu.active {
+                display: block;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 50px 0;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script src="https://toolnovanext.github.io/scripts/navigation.js" defer></script>
+    <script src="https://toolnovanext.github.io/scripts/notification.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <h1>Join ToolNova Next</h1>
-    <p class="slogan">Realizing Dreams Through the Touch of Technology</p>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">TN</div>
+                <div class="logo-text">
+                    <h1>Toolnova Next</h1>
+                    <p>Realizing Dreams Through the Touch of Technology</p>
+                </div>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="https://toolnovanext.github.io/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="section">
-      <h2>Nova Suggestion Box</h2>
-      <div class="feedback-box">
-        <p>Have an idea or feedback? Help us improve ToolNova Next!</p>
-        <a href="https://accessibleresource.github.io/Feedback/" target="_blank">Send Feedback</a>
-      </div>
-    </div>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Accessible Resource</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to the Accessible Resource family, a community-driven initiative dedicated to creating technology that empowers everyone. Our mission is to develop intuitive, accessible, and innovative solutions that break down barriers and make technology available to all.</p>
+                    <p>We believe that technology should be a tool for empowerment, not a source of frustration. That's why all our web apps, Android apps, and Windows software are completely free, with no hidden costs or premium tiers.</p>
+                </div>
+                <div class="about-icons">
+                    <div class="icon-box">
+                        <i>🌐</i>
+                        <span>Web Apps</span>
+                    </div>
+                    <div class="icon-box">
+                        <i>🤖</i>
+                        <span>Android Apps</span>
+                    </div>
+                    <div class="icon-box">
+                        <i>🪟</i>
+                        <span>Windows Software</span>
+                    </div>
+                    <div class="icon-box">
+                        <i>🔍</i>
+                        <span>AI Tools</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mission-vision">
+                <div class="mission">
+                    <h3>📋 Our Mission</h3>
+                    <p>To create technology that is intuitive, accessible, and innovative for all users.</p>
+                </div>
+                <div class="vision">
+                    <h3>🔭 Our Vision</h3>
+                    <p>Empowering a future where every tool is usable by everyone, regardless of device or ability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="section">
-      <h2>Why Join ToolNova Next?</h2>
-      <ul class="benefits">
-        <li>Get early access to exclusive tools</li>
-        <li>Learn with step-by-step guides & tutorials</li>
-        <li>Receive updates, tips, and latest features</li>
-        <li>Engage in our multi-language community</li>
-        <li>Request custom features & report bugs easily</li>
-        <li>Be part of a growing accessibility movement</li>
-      </ul>
-    </div>
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">What is Toolnova Next?</div>
+                    <div class="faq-answer">
+                        <p>Toolnova Next is a platform providing web, Android, and Windows software, as well as AI tools, developed by the Accessible Resource family for accessibility and innovation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What does the website offer?</div>
+                    <div class="faq-answer">
+                        <p>We offer free web apps, Android apps, Windows software, AI tools, user-favorite tools, blog tutorials, and community updates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Are the tools free?</div>
+                    <div class="faq-answer">
+                        <p>Yes, all web apps, Android apps, and Windows software are completely free; no premium fees.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you have an Android app?</div>
+                    <div class="faq-answer">
+                        <p>Yes, we have a fully integrated and accessibility-optimized Android app.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you have Windows software?</div>
+                    <div class="faq-answer">
+                        <p>Yes, all Windows software is free and works seamlessly with the web and Android tools.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How can I join the community?</div>
+                    <div class="faq-answer">
+                        <p>You can join our community using the WhatsApp or Telegram buttons in the Important Links section.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you have a YouTube channel?</div>
+                    <div class="faq-answer">
+                        <p>Yes, you can access our YouTube channel by clicking the YouTube button in the Important Links section.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What is Blind Tech Visionary?</div>
+                    <div class="faq-answer">
+                        <p>Blind Tech Visionary is a channel with insights on tech, accessibility, and innovation; accessed via its button in the Important Links section.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I provide feedback?</div>
+                    <div class="faq-answer">
+                        <p>Simply click the Feedback button to open the Feedback page.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Are the tools compatible with all devices?</div>
+                    <div class="faq-answer">
+                        <p>Yes, our tools are compatible with Android, iOS, Windows, and desktop browsers.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How often is the content updated?</div>
+                    <div class="faq-answer">
+                        <p>We update our content regularly through blog posts and community updates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I request new features?</div>
+                    <div class="faq-answer">
+                        <p>Yes, you can request new features via the Feedback button.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Does the team provide personal support?</div>
+                    <div class="faq-answer">
+                        <p>Yes, the Accessible Resource family assists users with any questions or issues.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Are there step-by-step guides?</div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide step-by-step guides on our website and YouTube channel.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How can I follow updates?</div>
+                    <div class="faq-answer">
+                        <p>You can follow updates through WhatsApp, Telegram, YouTube, and Toolnova Blog buttons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="section">
-      <h2>Join Our Community</h2>
-      <div class="buttons">
-        <a href="https://youtube.com/@accessibleresource?si=LGhrnQDGHw-BTroD" class="youtube" target="_blank">Join on YouTube</a>
-        <a href="https://t.me/shopnotamal" class="telegram" target="_blank">Join on Telegram</a>
-        <a href="https://chat.whatsapp.com/H9lg9OTMFwaLybT4UvWP9z" class="whatsapp" target="_blank">Join on WhatsApp</a>
-      </div>
-    </div>
-  </div>
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Our family ensures all tools and software are accessible, reliable, and user-friendly, maintaining the platform, providing support, and developing innovative solutions.</p>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-icon">💻</div>
+                    <div class="team-info">
+                        <h3>Developers</h3>
+                        <p>Creating innovative solutions</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">🎨</div>
+                    <div class="team-info">
+                        <h3>Designers</h3>
+                        <p>Crafting intuitive interfaces</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">🤖</div>
+                    <div class="team-info">
+                        <h3>AI Engineers</h3>
+                        <p>Building smart tools</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">👥</div>
+                    <div class="team-info">
+                        <h3>Community Managers</h3>
+                        <p>Connecting with users</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Work & Future Plans Section -->
+    <section id="work-plans">
+        <div class="container">
+            <h2>Current Work & Future Plans</h2>
+            <div class="work-plans">
+                <div class="current-work">
+                    <h3>🔄 Current Work</h3>
+                    <ul>
+                        <li>Updating web, Android, and Windows platforms</li>
+                        <li>Integrating AI tools</li>
+                        <li>Regular blog updates</li>
+                        <li>Optimizing for accessibility and performance</li>
+                        <li>Providing tutorials and community support</li>
+                    </ul>
+                </div>
+                <div class="future-plans">
+                    <h3>🚀 Future Plans</h3>
+                    <ul>
+                        <li>Launch AI-powered extensions</li>
+                        <li>Expand community engagement</li>
+                        <li>Provide interactive tutorials</li>
+                        <li>Continuous UI/UX improvements</li>
+                        <li>Develop future-ready accessible tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Links Section -->
+    <section id="links">
+        <div class="container">
+            <h2>Important Links</h2>
+            <div class="links-grid">
+                <a href="https://toolnovanext.github.io/ToolFusion-AI/" target="_blank" class="link-btn">Tool Fusion AI</a>
+                <a href="https://toolnovanext.github.io/User-favourite/" target="_blank" class="link-btn">User Favourite</a>
+                <a href="https://toolnovanext.github.io/ToolNova-blog/" target="_blank" class="link-btn">Toolnova Blog</a>
+                <a href="https://chat.whatsapp.com/H9lg9OTMFwaLybT4UvWP9z?mode=ems_copy_h_t" target="_blank" class="link-btn">WhatsApp Community</a>
+                <a href="https://t.me/shopnotamal" target="_blank" class="link-btn">Telegram Channel</a>
+                <a href="https://t.me/blindtechvisionary" target="_blank" class="link-btn">Blind Tech Visionary</a>
+                <a href="https://www.youtube.com/@accessibleresource" target="_blank" class="link-btn">YouTube Channel</a>
+                <a href="https://toolnovanext.github.io/Feedback/" class="link-btn" id="feedback-btn">Feedback</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">TN</div>
+                    <div class="footer-logo-text">
+                        <h3>Toolnova Next</h3>
+                        <p>Thanks for visiting Toolnova Next. We will continuously add new features.</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="https://toolnovanext.github.io/" class="footer-link">Home</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Toolnova Next. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+                
+                // Close other FAQ items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Feedback button functionality
+        document.getElementById('feedback-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open(this.href, '_blank');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
